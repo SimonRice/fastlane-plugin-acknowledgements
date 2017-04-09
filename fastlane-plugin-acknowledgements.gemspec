@@ -5,7 +5,7 @@ require 'fastlane/plugin/acknowledgements/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-acknowledgements'
-  spec.version       = Fastlane::UpdateProjectCodesigning::VERSION
+  spec.version       = Fastlane::Acknowledgements::VERSION
   spec.version = "#{spec.version}-alpha-#{ENV['TRAVIS_BUILD_NUMBER']}" if ENV['TRAVIS']
   spec.authors       = ["Simon Rice", "Christophe Knage"]
   spec.email         = ["simon@simonrice.com"]

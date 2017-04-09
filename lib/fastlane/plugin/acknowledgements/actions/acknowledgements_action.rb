@@ -40,7 +40,7 @@ module Fastlane
           acknowledgementListItem
       end
 
-      def save_acknowledgement_list(acknowledgementListItems, settings_bundle)
+      def self.save_acknowledgement_list(acknowledgementListItems, settings_bundle)
           # Create a arbitrary data structure of basic data types
           acknowledgementList = {
             'StringsTable' => 'ThirdPartyLicenses',
@@ -70,13 +70,13 @@ module Fastlane
             project_license = license_file.read
 
             # Create Acknowledgement- plist
-            acknowledgement_item = createAcknowledgement(project_name, project_license, settings_bundle)
+            acknowledgement_item = create_acknowledgement(project_name, project_license, settings_bundle)
             license_file.close
             acknowledgement_list.push(acknowledgement_item)
         end
 
         # Push AcknowledgementGenerator License
-        acknowledgement_generator_license = create_acknowledgement("AcknowledgementGenerator (Fastlane Edition)", ACKNOWLEDGEMENT_GENERATOR_LICENSE)
+        acknowledgement_generator_license = create_acknowledgement("AcknowledgementGenerator (Fastlane Edition)", ACKNOWLEDGEMENT_GENERATOR_LICENSE, settings_bundle)
         acknowledgement_list.push(acknowledgement_generator_license)
         sorted_acknowledgements = acknowledgement_list.sort_by { |item| item["Title"].downcase }
 
@@ -85,7 +85,7 @@ module Fastlane
         save_acknowledgement_list(sorted_acknowledgements, settings_bundle)
 
         # All finished
-        UI.success "Acknowledgement Generator Finished."
+        UI.success "Acknowledgement Generator Finished"
       end
 
       #####################################################
