@@ -1,0 +1,6 @@
+lane :test do
+  acknowledgements(
+    settings_bundle: "example-project/settings.bundle",
+    license_path: "example-project/licenses",
+    )
+end

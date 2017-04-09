@@ -93,7 +93,7 @@ module Fastlane
       #####################################################
 
       def self.description
-        "A short description with <= 80 characters of what this action does"
+        "Use Fastlane to give credit where it's rightfully due"
       end
 
       def self.details
