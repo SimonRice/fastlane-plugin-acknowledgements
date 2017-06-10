@@ -24,6 +24,8 @@ You'll see the acknowledgements in your app's settings scene, so create a settin
 
 ### 3.  Add Plugin
 
+This project is a [fastlane](https://github.com/fastlane/fastlane) plugin. To get started with fastlane-plugin-acknowledgements, add it to your project by running:
+
 ```bash
 fastlane add_plugin acknowledgements
 ```
