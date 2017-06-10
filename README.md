@@ -1,7 +1,7 @@
 # Acknowledgements `fastlane` plugin
 
 [![Fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-acknowledgements)
-![Build Status](https://api.travis-ci.org/simonrice/fastlane-plugin-acknowledgements.svg)
+[![Build Status](https://api.travis-ci.org/simonrice/fastlane-plugin-acknowledgements.svg)](https://travis-ci.org/simonrice/fastlane-plugin-acknowledgements)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/fastlane-plugin-acknowledgements)
 [![Twitter: @_simonrice](https://img.shields.io/badge/contact-@_simonrice-blue.svg?style=flat)](https://twitter.com/_simonrice)
 [![License](https://img.shields.io/badge/license-Beerware_🍺-green.svg?style=flat)](https://github.com/simonrice/fastlane-plugin-acknowledgements/blob/master/LICENSE)
