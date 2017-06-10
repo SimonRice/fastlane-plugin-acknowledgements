@@ -6,13 +6,12 @@ require 'redcarpet/render_strip'
 module Fastlane
   module Actions
     class AcknowledgementsAction < Action
-
       ACKNOWLEDGEMENT_GENERATOR_LICENSE = '"THE BEER-WARE LICENSE" (Revision 42):' \
         '
         ' \
         '<http://www.knage.net> & <https://simonrice.com> wrote this file. As long as you retain this notice you ' \
         'can do whatever you want with this stuff. If we meet some day, and you think ' \
-        'this stuff is worth it, you can buy me a beer in return Christophe Vallinas Knage & Simon Rice.'
+        'this stuff is worth it, you can buy me a beer in return Christophe Vallinas Knage & Simon Rice.'.freeze
 
       def self.create_acknowledgement(name, content, settings_bundle)
         # Create a arbitrary data structure of basic data types
@@ -104,23 +103,23 @@ module Fastlane
       def self.available_options
         [
           FastlaneCore::ConfigItem.new(key: :settings_bundle,
-                                       env_name: "FL_ACKNOWLEDGEMENTS_SETTINGS_BUNDLE",
-                                       description: "Location of the settings bundle file",
+                                       env_name: 'FL_ACKNOWLEDGEMENTS_SETTINGS_BUNDLE',
+                                       description: 'Location of the settings bundle file',
                                        verify_block: proc do |value|
                                          UI.user_error!("No Settings Bundle path for AcknowledgementsAction given, pass using `settings_bundle: 'path/to/settings.bundle'`") unless value && !value.empty?
                                          UI.user_error!("Couldn't find file at path '#{value}'") unless File.exist?(value)
                                        end),
 
           FastlaneCore::ConfigItem.new(key: :license_path,
-                                       env_name: "FL_ACKNOWLEDGEMENTS_LICENSE_PATH",
-                                       description: "Path containing the license files",
+                                       env_name: 'FL_ACKNOWLEDGEMENTS_LICENSE_PATH',
+                                       description: 'Path containing the license files',
                                        verify_block: proc do |value|
                                          UI.user_error!("No License path for AcknowledgementsAction given, pass using `license_path: 'path/to/licenses/'`") unless value && !value.empty?
                                          UI.user_error!("Couldn't find file at path '#{value}'") unless File.exist?(value)
                                        end),
 
           FastlaneCore::ConfigItem.new(key: :license_path,
-                                       env_name: "FL_ACKNOWLEDGEMENTS_LICENSE_EXTENSION",
+                                       env_name: 'FL_ACKNOWLEDGEMENTS_LICENSE_EXTENSION',
                                        description: "File extension for license files.  Defaults to '.license'.",
                                        default_value: '.license')
         ]
@@ -131,7 +130,7 @@ module Fastlane
         ['@_simonrice', '@cvknage']
       end
 
-      def self.is_supported?(platform)
+      def self.is_supported?(_platform)
         true
       end
     end
