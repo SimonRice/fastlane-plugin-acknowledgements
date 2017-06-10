@@ -118,7 +118,7 @@ module Fastlane
                                          UI.user_error!("Couldn't find file at path '#{value}'") unless File.exist?(value)
                                        end),
 
-          FastlaneCore::ConfigItem.new(key: :license_path,
+          FastlaneCore::ConfigItem.new(key: :license_extension,
                                        env_name: 'FL_ACKNOWLEDGEMENTS_LICENSE_EXTENSION',
                                        description: "File extension for license files.  Defaults to '.license'.",
                                        default_value: '.license')

@@ -13,15 +13,15 @@ Gem::Specification.new do |spec|
   spec.email         = ['simon@simonrice.com']
 
   spec.summary       = "Use Fastlane to give credit where it's rightfully due"
-  spec.homepage      = 'https://github.com/hjanuschka/fastlane-plugin-acknowledgements'
+  spec.homepage      = 'https://github.com/simonrice/fastlane-plugin-acknowledgements'
   spec.license       = 'THE BEER-WARE LICENSE'
 
   spec.files         = Dir['lib/**/*'] + %w[README.md LICENSE]
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'CFPropertyList'
-  spec.add_dependency 'redcarpet'
+  spec.add_dependency 'CFPropertyList', '>= 2.3', '< 3.0.0' # Needed to be able to read binary plist format
+  spec.add_dependency 'redcarpet', '~> 3.0'
 
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'bundler'
