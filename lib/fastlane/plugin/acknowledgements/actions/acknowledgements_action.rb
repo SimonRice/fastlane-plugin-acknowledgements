@@ -1,4 +1,5 @@
 require 'CFPropertyList'
+require 'redcarpet'
 
 module Fastlane
   module Actions
@@ -70,6 +71,7 @@ module Fastlane
             project_license = license_file.read
 
             # Create Acknowledgement- plist
+            parser = Redcarpet::Markdown.new(renderer, extensions = {})
             acknowledgement_item = create_acknowledgement(project_name, project_license, settings_bundle)
             license_file.close
             acknowledgement_list.push(acknowledgement_item)

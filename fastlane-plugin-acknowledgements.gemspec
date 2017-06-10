@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'CFPropertyList'
+  spec.add_dependency 'redcarpet'
 
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'bundler'
