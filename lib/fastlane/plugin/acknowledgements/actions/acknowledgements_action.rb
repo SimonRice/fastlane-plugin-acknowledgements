@@ -120,7 +120,7 @@ module Fastlane
 
           FastlaneCore::ConfigItem.new(key: :license_extension,
                                        env_name: 'FL_ACKNOWLEDGEMENTS_LICENSE_EXTENSION',
-                                       description: "File extension for license files.  Defaults to '.license'.",
+                                       description: "File extension for license files.  Defaults to '.license'",
                                        default_value: '.license')
         ]
       end
